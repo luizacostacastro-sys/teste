@@ -1,0 +1,396 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   CLASSE REUTILIZÁVEL
+========================= */
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.cabecalho {
+  background-color: #111827;
+  color: white;
+  padding: 20px 0;
+}
+
+.cabecalho .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cabecalho h1 {
+  font-size: 24px;
+}
+
+
+/* MENU */
+
+.navegacao {
+  display: flex;
+  gap: 25px;
+}
+
+.navegacao a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navegacao a:hover {
+  color: #60a5fa;
+}
+
+
+/* =========================
+   SEÇÃO PRINCIPAL
+========================= */
+
+.hero {
+  padding: 100px 0;
+  text-align: center;
+  background-color: #eff6ff;
+}
+
+.hero h2 {
+  font-size: 42px;
+  color: #1e3a8a;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+
+/* =========================
+   BOTÃO REUTILIZÁVEL
+========================= */
+
+.botao {
+  display: inline-block;
+
+  padding: 12px 24px;
+
+  background-color: #2563eb;
+
+  color: white;
+
+  text-decoration: none;
+
+  border: none;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+  transition: 0.3s;
+}
+
+.botao:hover {
+  background-color: #1d4ed8;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   SEÇÃO DE SERVIÇOS
+========================= */
+
+.servicos {
+  padding: 80px 0;
+
+  background-color: #f5f7fa;
+}
+
+
+/* Cabeçalho da seção */
+
+.secao-cabecalho {
+  text-align: center;
+
+  margin-bottom: 40px;
+}
+
+.secao-cabecalho h2 {
+  font-size: 32px;
+
+  color: #111827;
+
+  margin-bottom: 10px;
+}
+
+.secao-cabecalho p {
+  color: #666;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.servicos-lista {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+
+/* CLASSE REUTILIZÁVEL */
+
+.card {
+  background-color: white;
+
+  padding: 30px;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 4px 15px
+    rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 8px 25px
+    rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+  color: #1e3a8a;
+
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #666;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================
+   CONTATO
+========================= */
+
+.contato {
+  padding: 80px 0;
+
+  text-align: center;
+}
+
+.contato h2 {
+  margin-bottom: 15px;
+}
+
+.contato p {
+  color: #666;
+
+  margin-bottom: 25px;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+.rodape {
+  padding: 25px 0;
+
+  text-align: center;
+
+  background-color: #111827;
+
+  color: white;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+  display: none;
+
+  position: fixed;
+
+  z-index: 1000;
+
+  inset: 0;
+
+  background-color:
+    rgba(0, 0, 0, 0.65);
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 20px;
+}
+
+
+/* Quando estiver aberto */
+
+.modal.ativo {
+  display: flex;
+}
+
+
+/* Caixa */
+
+.modal-conteudo {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 500px;
+
+  background-color: white;
+
+  padding: 40px;
+
+  border-radius: 12px;
+
+  text-align: center;
+
+  box-shadow:
+    0 10px 30px
+    rgba(0, 0, 0, 0.3);
+
+  animation:
+    aparecer 0.3s ease;
+}
+
+
+/* Animação */
+
+@keyframes aparecer {
+
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+
+/* Título do modal */
+
+.modal-conteudo h2 {
+  color: #1e3a8a;
+
+  margin-bottom: 20px;
+}
+
+
+/* Texto */
+
+.modal-conteudo p {
+  color: #555;
+
+  margin-bottom: 25px;
+}
+
+
+/* Botão X */
+
+.fechar {
+  position: absolute;
+
+  top: 10px;
+
+  right: 15px;
+
+  border: none;
+
+  background: transparent;
+
+  font-size: 30px;
+
+  color: #555;
+
+  cursor: pointer;
+}
+
+.fechar:hover {
+  color: #e11d48;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 768px) {
+
+  .cabecalho .container {
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+
+  .navegacao {
+    gap: 15px;
+  }
+
+
+  .hero h2 {
+    font-size: 32px;
+  }
+
+
+  .servicos-lista {
+    grid-template-columns: 1fr;
+  }
+
+
+  .card {
+    text-align: center;
+  }
+
+}
