@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Minha Empresa</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="cabecalho">
+    <div class="container">
+
+      <h1>Minha Empresa</h1>
+
+      <nav class="navegacao">
+        <a href="#inicio">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- Seção inicial -->
+    <section class="hero" id="inicio">
+
+      <div class="container">
+
+        <h2>Soluções digitais para o seu negócio</h2>
+
+        <p>
+          Criamos experiências digitais modernas,
+          profissionais e eficientes.
+        </p>
+
+        <a href="#servicos" class="botao">
+          Conheça nossos serviços
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- NOVA SEÇÃO DA ATIVIDADE -->
+    <section class="servicos" id="servicos">
+
+      <div class="container">
+
+        <header class="secao-cabecalho">
+
+          <h2>Nossos Serviços</h2>
+
+          <p>
+            Conheça algumas das soluções que oferecemos
+            para nossos clientes.
+          </p>
+
+        </header>
+
+
+        <div class="servicos-lista">
+
+
+          <!-- CARD 1 -->
+          <article class="card">
+
+            <h3>Desenvolvimento Web</h3>
+
+            <p>
+              Criamos sites modernos, responsivos e preparados
+              para diferentes dispositivos.
+            </p>
+
+            <button
+              class="botao"
+              onclick="abrirModal('web')">
+              Saiba mais
+            </button>
+
+          </article>
+
+
+          <!-- CARD 2 -->
+          <article class="card">
+
+            <h3>Design</h3>
+
+            <p>
+              Desenvolvemos interfaces profissionais com foco
+              na experiência do usuário.
+            </p>
+
+            <button
+              class="botao"
+              onclick="abrirModal('design')">
+              Saiba mais
+            </button>
+
+          </article>
+
+
+          <!-- CARD 3 -->
+          <article class="card">
+
+            <h3>Consultoria</h3>
+
+            <p>
+              Ajudamos sua empresa a encontrar soluções
+              digitais eficientes.
+            </p>
+
+            <button
+              class="botao"
+              onclick="abrirModal('consultoria')">
+              Saiba mais
+            </button>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Contato -->
+    <section class="contato" id="contato">
+
+      <div class="container">
+
+        <h2>Entre em contato</h2>
+
+        <p>
+          Estamos prontos para ajudar seu projeto a crescer.
+        </p>
+
+        <a
+          href="mailto:contato@exemplo.com"
+          class="botao">
+          Fale conosco
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- Rodapé -->
+  <footer class="rodape">
+
+    <div class="container">
+
+      <p>
+        © 2026 Minha Empresa.
+        Todos os direitos reservados.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- JANELA DOS BOTÕES -->
+  <div class="modal" id="modal">
+
+    <div class="modal-conteudo">
+
+      <button
+        class="fechar"
+        onclick="fecharModal()">
+        ×
+      </button>
+
+      <h2 id="modal-titulo">
+        Título
+      </h2>
+
+      <p id="modal-texto">
+        Texto
+      </p>
+
+      <button
+        class="botao"
+        onclick="fecharModal()">
+        Fechar
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- p5.js -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js"></script>
+
+  <!-- Seu JavaScript -->
+  <script src="sketch.js"></script>
+
+</body>
+
+</html>
